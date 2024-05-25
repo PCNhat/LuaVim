@@ -16,3 +16,10 @@ vim.opt.scrolloff = 8
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+
+
+-- Define a highlight group
+vim.cmd('highlight link MyDollar Identifier')
+
+-- Match $ symbol and apply MyCustomHighlight
+vim.fn.matchadd('MyDollar', '\\$')
