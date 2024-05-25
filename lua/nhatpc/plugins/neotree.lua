@@ -8,6 +8,10 @@ return {
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
     config = function ()
-        vim.cmd("Neotree filesystem reveal left")
+        local stats = vim.uv.fs_stat(vim.fn.argv(0))
+        if stats and stats.type == "directory" then
+          vim.cmd("Neotree filesystem reveal left")
+          --vim.cmd("Neotree position=current")
+        end
     end
 }
