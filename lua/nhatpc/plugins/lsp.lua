@@ -46,6 +46,11 @@ return {
                 end,
             },
 
+            window = {
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
+            },
+
             mapping = cmp.mapping.preset.insert({
                 ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
@@ -76,3 +81,5 @@ return {
         })
     end
 }
+
+

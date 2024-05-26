@@ -15,7 +15,7 @@ return {
                 keywords = { italic = false },
                 -- Background styles. Can be "dark", "transparent" or "normal"
                 sidebars = "normal", -- style for sidebars, see below
-                floats = "dark", -- style for floating windows
+                floats = "normal", -- style for floating windows
             },
 
             --- You can override specific color groups to use other groups or a hex color
