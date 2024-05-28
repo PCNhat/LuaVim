@@ -37,6 +37,20 @@ return {
                         capabilities = capabilities
                     }
                 end,
+
+                -- Suppress warning: undefined global `vim`
+                ["lua_ls"] = function ()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.lua_ls.setup {
+                        settings = {
+                            Lua = {
+                                diagnostics = {
+                                    globals = { "vim" }
+                                }
+                            }
+                        }
+                    }
+                end,
             }
         })
 
@@ -103,18 +117,6 @@ return {
           })
         })
 
-
-        -- Suppress warning: undefined global `vim`
-        require('lspconfig').lua_ls.setup({
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = {'vim'}
-                    }
-                }
-              }
-        })
-
         -- Key maps
         local map = function(keys, func, desc)
           vim.keymap.set('n', keys, func, { desc = 'LSP: ' .. desc })
@@ -159,32 +161,6 @@ return {
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header.
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-
-
-        -- Vuels
-        -- If you are using mason.nvim, you can get the ts_plugin_path like this
-        local mason_registry = require('mason-registry')
-        local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
-
-        -- local vue_language_server_path = '/path/to/@vue/language-server'
-
-        local lspconfig = require('lspconfig')
-
-        lspconfig.tsserver.setup {
-          init_options = {
-            plugins = {
-              {
-                name = '@vue/typescript-plugin',
-                location = vue_language_server_path,
-                languages = { 'vue' },
-              },
-            },
-          },
-          filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-        }
-
-        -- No need to set `hybridMode` to `true` as it's the default value
-        lspconfig.volar.setup {}
     end
 }
 
