@@ -11,6 +11,7 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "rafamadriz/friendly-snippets"
     },
 
     config = function()
@@ -23,6 +24,7 @@ return {
             cmp_lsp.default_capabilities()
         )
 
+        require("luasnip.loaders.from_vscode").lazy_load()
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
