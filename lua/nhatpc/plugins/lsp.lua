@@ -51,6 +51,49 @@ return {
                         }
                     }
                 end,
+                ["vuels"] = function ()
+                    local lspconfig = require('lspconfig')
+
+                    -- Define Vetur LSP configuration for Nuxt.js
+                    local vuels_settings = {
+                        vetur = {
+                            completion = {
+                                autoImport = true,
+                                tagCasing = "kebab",
+                            },
+                            format = {
+                                defaultFormatter = {
+                                    js = "prettier",
+                                    ts = "prettier",
+                                    css = "prettier",
+                                    postcss = "prettier",
+                                    scss = "prettier",
+                                    less = "prettier",
+                                    html = "prettier",
+                                    vue = "prettier",
+                                }
+                            },
+                            useWorkspaceDependencies = true,
+                            validation = {
+                                script = true,
+                                style = true,
+                                template = true,
+                            },
+                            experimental = {
+                                templateInterpolationService = true
+                            },
+                            customTags = {
+                                "asyncData",
+                                "fetch",
+                                "layout",
+                                "middleware",
+                                "transition",
+                            },
+                        }
+                    }
+
+                    lspconfig.vuels.setup(vuels_settings)
+                end
             }
         })
 
@@ -131,7 +174,7 @@ return {
 
         -- Jump to the implementation of the word under your cursor.
         --  Useful when your language has ways of declaring types without an actual implementation.
-        map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+        map('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 
         -- Jump to the type of the word under your cursor.
         --  Useful when you're not sure what type a variable is and you want to see
