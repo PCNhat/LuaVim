@@ -16,3 +16,9 @@ vim.opt.scrolloff = 5
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+
+-- Set list option to display invisible characters
+vim.opt.list = true
+
+-- Set listchars to display spaces as middle dot
+vim.api.nvim_set_option('listchars', 'space:·')
