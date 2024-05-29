@@ -25,6 +25,12 @@ return {
             on_colors = function(colors)
                 colors.bg = "#16161e"
             end,
+
+            on_highlights = function(highlights, colors)
+                highlights["@variable"] = {
+                    fg = colors.teal
+                }
+            end
         })
         vim.cmd("colorscheme tokyonight")
     end
