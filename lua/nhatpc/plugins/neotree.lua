@@ -10,7 +10,7 @@ return {
     config = function ()
         local stats = vim.uv.fs_stat(vim.fn.argv(0))
         if stats and stats.type == "directory" then
-          vim.cmd("Neotree filesystem reveal left")
+          -- vim.cmd("Neotree filesystem reveal left")
           --vim.cmd("Neotree position=current")
         end
     end
