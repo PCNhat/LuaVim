@@ -22,3 +22,5 @@ vim.opt.list = true
 
 -- Set listchars to display spaces as middle dot
 vim.api.nvim_set_option('listchars', 'space:·')
+
+vim.opt.colorcolumn = "120"
