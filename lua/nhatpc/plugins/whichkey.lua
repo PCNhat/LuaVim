@@ -10,8 +10,9 @@ return {
           {
             -- add group
             ["<leader>"] = {
-              f = { name = "Find" },
-              s = { name = "Search" },
+              f = { desc = "[F]ind" },
+              h = { desc = "Git [H]unk" },
+              s = { desc = "[S]earch" },
             }
           }
         )
