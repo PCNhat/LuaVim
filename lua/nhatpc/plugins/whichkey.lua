@@ -10,9 +10,14 @@ return {
           {
             -- add group
             ["<leader>"] = {
-              f = { desc = "[F]ind" },
-              h = { desc = "Git [H]unk" },
-              s = { desc = "[S]earch" },
+                c = { desc = "[C]ode" },
+                d = { desc = "[D]ocument" },
+                f = { desc = "[F]ind" },
+                h = { desc = "Git [H]unk" },
+                r = { desc = "[R]ename" },
+                s = { desc = "[S]earch" },
+                t = { desc = "[T]oggle" },
+                w = { desc = "[W]orkspace" },
             }
           }
         )

@@ -81,7 +81,7 @@ return {
                 map('n', '<leader>hR', gitsigns.reset_buffer, { desc = "[R]eset buffer" })
                 map('n', '<leader>hp', gitsigns.preview_hunk, { desc = "Git [P]review hunk" })
                 map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end, { desc = "Git [B]lame hunk" })
-                map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
+                map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = "Git [T]oggle line blame" })
                 map('n', '<leader>hd', gitsigns.diffthis, { desc = "Git [D]iff" })
                 map('n', '<leader>hD', function() gitsigns.diffthis('~') end, { desc = "Git [D]iff ~" })
                 map('n', '<leader>td', gitsigns.toggle_deleted, { desc = "Git [T]oggle deleted" })
