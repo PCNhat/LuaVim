@@ -14,6 +14,12 @@ return {
         end
     },
     {
+        'windwp/nvim-autopairs',
+        config = function ()
+            require("nvim-autopairs").setup({})
+        end
+    },
+    {
         "hrsh7th/nvim-cmp",
         dependencies = {
             "hrsh7th/cmp-buffer",
@@ -23,6 +29,7 @@ return {
 
         config = function()
             local cmp = require('cmp')
+            local cmp_autopairs = require("nvim-autopairs.completion.cmp")
             cmp.setup({
                 snippet = {
                     expand = function(args)
@@ -69,6 +76,11 @@ return {
                     }
               })
             })
+
+            cmp.event:on(
+                'confirm_done',
+                cmp_autopairs.on_confirm_done()
+            )
         end
     },
 }
