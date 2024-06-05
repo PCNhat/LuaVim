@@ -25,3 +25,10 @@ vim.api.nvim_create_user_command("CopyFileName", function()
     vim.fn.setreg("+", path)
     vim.notify('Copied "' .. path .. '" to the clipboard!')
 end, {})
+
+
+-- Show relative path
+vim.api.nvim_create_user_command("ShowRelPath", function()
+    local path = vim.fn.expand("%")
+    vim.notify(path)
+end, {})
