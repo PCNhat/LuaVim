@@ -32,3 +32,12 @@ vim.api.nvim_create_user_command("ShowRelPath", function()
     local path = vim.fn.expand("%")
     vim.notify(path)
 end, {})
+
+-- Show relative path
+vim.api.nvim_create_user_command("SetIndentSpace", function(opts)
+    vim.opt.tabstop = tonumber(opts.args)
+    vim.opt.softtabstop = tonumber(opts.args)
+    vim.opt.shiftwidth = tonumber(opts.args)
+
+    vim.notify("Set indent to " .. opts.args .. " spaces")
+end, {nargs = '?'})
