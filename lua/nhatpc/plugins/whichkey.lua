@@ -7,25 +7,26 @@ return {
 
         local wk = require("which-key")
         wk.register(
-          {
-            -- add group
-            ["<leader>"] = {
-                c = { desc = "[C]ode" },
-                d = { desc = "[D]ocument" },
-                f = { desc = "[F]ind" },
-                h = { desc = "Git [H]unk" },
-                r = { desc = "[R]ename" },
-                s = { desc = "[S]earch" },
-                t = { desc = "[T]oggle" },
-                w = { desc = "[W]orkspace" },
+            {
+                -- add group
+                ["<leader>"] = {
+                    c = { desc = "[C]ode" },
+                    d = { desc = "[D]ocument" },
+                    f = { desc = "[F]ind" },
+                    h = { desc = "Git [H]unk" },
+                    m = { desc = "[M]ake" },
+                    r = { desc = "[R]ename" },
+                    s = { desc = "[S]earch" },
+                    t = { desc = "[T]oggle" },
+                    w = { desc = "[W]orkspace" },
+                }
             }
-          }
         )
     end,
 
     opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
     },
 }
