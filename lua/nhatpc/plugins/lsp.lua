@@ -54,6 +54,21 @@ return {
         config = function()
             require("fidget").setup({})
         end
+    },
+    {
+        "jay-babu/mason-null-ls.nvim",
+        dependencies = {
+            "nvimtools/none-ls.nvim"
+        },
+        config = function()
+            require("mason-null-ls").setup({
+                ensure_installed = {
+                    "stylua",
+                    "jq",
+                    "php-cs-fixer"
+                }
+            })
+        end
     }
 }
 

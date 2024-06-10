@@ -13,8 +13,14 @@ return {
                     c = { desc = "[C]ode" },
                     d = { desc = "[D]ocument" },
                     f = { desc = "[F]ind" },
-                    h = { desc = "Git [H]unk" },
-                    m = { desc = "[M]ake" },
+                    h = {
+                        mode = {"n", "v"},
+                        desc = "Git [H]unk",
+                    },
+                    m = {
+                        mode = {"n", "v"},
+                        desc = "[M]ake",
+                    },
                     r = { desc = "[R]ename" },
                     s = { desc = "[S]earch" },
                     t = { desc = "[T]oggle" },
