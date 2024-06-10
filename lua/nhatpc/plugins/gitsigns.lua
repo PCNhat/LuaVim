@@ -1,6 +1,9 @@
 return {
     {
         "tpope/vim-fugitive",
+        config = function ()
+            vim.g.fugitive_summary_format = "%cs || %<(20,trunc)%an || %s"
+        end
     },
     {
         "lewis6991/gitsigns.nvim",
