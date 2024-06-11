@@ -21,6 +21,7 @@ return {
                         mode = {"n", "v"},
                         desc = "[M]ake",
                     },
+                    q = { desc = "[Q]uickfix" },
                     r = { desc = "[R]ename" },
                     s = { desc = "[S]earch" },
                     t = { desc = "[T]oggle" },
