@@ -12,7 +12,7 @@ return {
             styles = {
                 -- Style to be applied to different syntax groups
                 -- Value is any valid attr-list value for `:help nvim_set_hl`
-                comments = { italic = false },
+                comments = { italic = true },
                 keywords = { italic = false },
                 -- Background styles. Can be "dark", "transparent" or "normal"
                 sidebars = "transparent", -- style for sidebars, see below
@@ -30,6 +30,9 @@ return {
                 highlights["@variable"] = {
                     fg = colors.teal
                 }
+
+                highlights["@variable.parameter.phpdoc"] = { link = "@variable" }
+                highlights["@keyword.phpdoc"] = { link = "@variable" }
             end
         })
         vim.cmd("colorscheme tokyonight")
