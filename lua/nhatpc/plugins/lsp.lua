@@ -22,7 +22,7 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "phpactor",
+                    "phpactor", "intelephense",
                     "vuels"
                 },
                 handlers = {
@@ -47,6 +47,8 @@ return {
                     end,
                 }
             })
+
+            vim.lsp.set_log_level("off")
         end
     },
     {
