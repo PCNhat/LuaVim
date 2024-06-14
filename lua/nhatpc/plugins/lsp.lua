@@ -22,7 +22,8 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "phpactor", "intelephense",
+                    -- "phpactor",
+                    "intelephense",
                     "vuels"
                 },
                 handlers = {
