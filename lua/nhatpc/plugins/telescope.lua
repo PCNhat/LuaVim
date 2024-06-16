@@ -19,6 +19,7 @@ return {
             end ,
             { desc = '[F]ind [F]iles' }
         )
+        vim.keymap.set('n', '<leader>fg', builtin.git_status, { desc = '[F]ind [G]it Changed Files' })
         vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[F]ind [B]uffers' })
         vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
         vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by Live [G]grep (root)' })
