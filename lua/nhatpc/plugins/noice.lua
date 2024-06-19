@@ -18,6 +18,16 @@ return {
                     },
                 },
             },
+            routes = {
+                {
+                    filter = {
+                        event = "msg_show",
+                        kind = "echomsg",
+                        find = "AutoSave",
+                    },
+                    opts = { skip = true },
+                },
+            },
         })
     end,
 }
