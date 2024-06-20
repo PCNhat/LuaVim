@@ -78,9 +78,13 @@ return {
                 },
                 sections = {
                     lualine_a = {'mode'},
-                    lualine_b = {'branch', 'diff', 'diagnostics'},
+                    lualine_b = {
+                        'branch',
+                        'diff',
+                        'diagnostics',
+                        'filename'
+                    },
                     lualine_c = {
-                        'filename',
                         {
                             function()
                                 return navic.get_location()
