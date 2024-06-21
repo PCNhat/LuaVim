@@ -80,9 +80,9 @@ return {
                     lualine_a = {'mode'},
                     lualine_b = {
                         'branch',
+                        'filename',
                         'diff',
-                        'diagnostics',
-                        'filename'
+                        'diagnostics'
                     },
                     lualine_c = {
                         {
