@@ -17,6 +17,7 @@ return {
                         mode = {"n", "v"},
                         desc = "Git [H]unk",
                     },
+                    j = {desc = "[J]ump"},
                     m = {
                         mode = {"n", "v"},
                         desc = "[M]ake",
