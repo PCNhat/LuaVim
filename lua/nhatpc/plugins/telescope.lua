@@ -14,6 +14,8 @@ return {
             '<leader>ff',
             function ()
                 builtin.find_files(require('telescope.themes').get_dropdown({
+                    winblend = 0,
+                    previewer = false,
                     layout_config = {
                         width = 0.8,
                         height = 0.9,
