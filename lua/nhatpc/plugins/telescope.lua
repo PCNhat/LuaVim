@@ -42,7 +42,16 @@ return {
         )
 
         vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-        vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by Live [G]grep (root)' })
+
+        vim.keymap.set(
+            'n',
+            '<leader>sg',
+            function ()
+                builtin.live_grep({ debounce = 1000 })
+            end,
+            { desc = '[S]earch by Live [G]grep (root)' }
+        )
+
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp tags' })
         vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
         vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
