@@ -33,7 +33,7 @@ return {
                 },
                 lsp = {
                     auto_attach = true,
-                    preference = nil,
+                    preference = {'intelephense', 'phpactor'},
                 },
                 highlight = false,
                 separator = "  ",
