@@ -25,6 +25,26 @@ return {
             { desc = '[F]ind [F]iles' }
         )
 
+        vim.keymap.set(
+            'n',
+            '<leader>fe',
+            function ()
+                builtin.find_files(
+                    {
+                        prompt_title = "Find Environment Files",
+                        search_dirs = {"./"},
+                        find_command = {
+                            "rg",
+                            "--files",
+                            "--iglob", "*.env",
+                            "--iglob", "*.env.example"
+                        },
+                    }
+                )
+            end ,
+            { desc = '[F]ind [E]nvironment Files' }
+        )
+
         vim.keymap.set('n', '<leader>fg', builtin.git_status, { desc = '[F]ind [G]it Changed Files' })
 
         vim.keymap.set(
