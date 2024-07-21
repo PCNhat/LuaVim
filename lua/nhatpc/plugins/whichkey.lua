@@ -14,17 +14,20 @@ return {
                     d = { desc = "[D]ocument" },
                     f = { desc = "[F]ind" },
                     h = {
-                        mode = {"n", "v"},
+                        mode = { "n", "v" },
                         desc = "Git [H]unk",
                     },
                     j = {desc = "[J]ump"},
                     m = {
-                        mode = {"n", "v"},
+                        mode = { "n", "v" },
                         desc = "[M]ake",
                     },
                     q = { desc = "[Q]uickfix" },
                     r = { desc = "[R]ename" },
-                    s = { desc = "[S]earch" },
+                    s = {
+                        mode = { "n", "v" };
+                        desc = "[S]earch"
+                    },
                     t = { desc = "[T]oggle" },
                     w = { desc = "[W]orkspace" },
                 }
