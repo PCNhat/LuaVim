@@ -80,7 +80,6 @@ return {
                     lualine_a = {'mode'},
                     lualine_b = {
                         'branch',
-                        'filename',
                         'diff',
                         'diagnostics'
                     },
@@ -123,7 +122,13 @@ return {
                     lualine_z = {}
                 },
                 tabline = {},
-                winbar = {},
+                winbar = {
+                    lualine_b = {
+                        {
+                            'filename', path = 1,
+                        }
+                    },
+                },
                 inactive_winbar = {},
                 extensions = {}
                 }
