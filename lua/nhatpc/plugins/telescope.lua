@@ -84,7 +84,18 @@ return {
             'n',
             '<leader>sg',
             function ()
-                builtin.live_grep({ debounce = 1000 })
+                builtin.live_grep({
+                    debounce = 1000,
+                    layout_strategy = "vertical",
+                    layout_config = {
+                        vertical = {
+                            width = 0.9,
+                            height = 0.9,
+                            preview_height = 0.6,
+                            preview_cutoff = 0
+                        }
+                    },
+                })
             end,
             { desc = '[S]earch by Live [G]grep (root)' }
         )
